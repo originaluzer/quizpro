@@ -1,4 +1,6 @@
-import React from 'react'
+import {useEffect,useState}from 'react'
+import axios from "axios";
+import { useGoogleLogin,GoogleLogin } from '@react-oauth/google';
 
 
 function Icon() {
@@ -98,9 +100,38 @@ function Icon() {
   );
 }
 
-
-
  function Hero() { 
+
+  const [user, setUser] = useState([]);
+  const [profile, setProfile] = useState([]);
+
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => console.log(codeResponse),
+    onError: (error) => console.log('Login Failed:', error)
+  });
+/* 
+  useEffect(
+    () => {
+        if (user) {
+          console.log(user);
+            axios
+                .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                    headers: {
+                        Authorization: `Bearer ${user.access_token}`,
+                        Accept: 'application/json'
+                    }
+                })
+                .then((res) => {
+                    setProfile(res.data);
+             
+                })
+                .catch((err) => console.log(err));
+        }
+    },
+    [ user ]
+); */
+
+
    return ( 
 <div className="relative">
   <header className="absolute inset-x-0 top-0 z-10 w-full">
@@ -172,10 +203,10 @@ function Icon() {
             About us{" "}
           </a>
           <a
-            href="#"
             title=""  
             className="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold transition-all duration-200 rounded-full bg-lime-500 text-white hover:bg-lime-600 "
             role="button"
+            onClick={()=>login()}
           >
             {" "}
             Login{" "}
@@ -206,7 +237,7 @@ function Icon() {
 
      
              <a
-              href="/"
+              href="/quiz"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black bg-lime-300 transition duration-200 rounded shadow-md  hover:bg-lime-300 focus:shadow-outline focus:outline-none"
             >
               Get started
