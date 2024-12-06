@@ -7,6 +7,9 @@ import { GoogleOAuthProvider } from "@react-oauth/google"
 import QuizPage from './Pages/QuizPage';
 import Hero from './Components/Hero';
 import Hiw from './Components/Hiw';
+import TakeQuiz from './Pages/TakeQuiz';
+import Quiz from './Pages/Quiz';
+import Signup from './Pages/Signup';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +20,17 @@ const router = createBrowserRouter([
     path: "/quiz",
     element: <QuizPage />
   },
- 
+  {
+    path: "/take-quiz",
+    element: <TakeQuiz/>
+  },
+  {
+    path: "/signup",
+    element: <Signup/>
+  },
+
+  
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

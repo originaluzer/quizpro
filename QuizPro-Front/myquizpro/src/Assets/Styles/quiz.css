@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.whole-thing {
+  font-family: 'Anek Malayalam', sans-serif;
+  background: linear-gradient(90.04deg, #408994 0.03%, #75c1ff 99.96%);
+  color: #11052c;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0 30px;
+  height:100vh;
+  width:100vw;
+}
+.hiddens{
+color:white;
+}
+
+.quiz-container {
+  max-width: 700px;
+  width:650px;
+  min-width: 550px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
+  max-height:600px;
+}
+
+.quiz-container .active-question-no {
+  font-size: 32px;
+  font-weight: 500;
+  color: #70a4cf;
+}
+
+.quiz-container .total-question {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e0dee3;
+}
+
+.quiz-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quiz-container ul {
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+.quiz-container ul li {
+  text-decoration: none;
+  list-style: none;
+  color: #2d264b;
+  font-size: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 11px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.quiz-container ul .selected-answer {
+  background: #ffd6ff;
+  border: 1px solid #800080;
+}
+
+.quiz-container button {
+  background: linear-gradient(90.04deg, #70a4cf 0.03%, #75c1ff 99.96%);
+  border-radius: 9px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 42px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: red;
+}
+
+.quiz-container button:disabled {
+  background: #e7e8e9;
+  color: #9fa3a9;
+  cursor: not-allowed;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.result{
+  width:500px;
+}
+
+.result h3 {
+  font-size: 24px;
+  letter-spacing: 1.4px;
+  text-align: center;
+}
+
+.result p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.result p span {
+  color: #800080;
+  font-size: 22px;
+}
+
+.test-start{
+  width:100px;
+  height:100px;
+  background:red;
+  margin:auto auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button{
+font-size:30px
+}
+
+.start-container{
+  height:100vh;
+  width:100vw;
+  background-color: #e5e5f7;
+  opacity: 0.4;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-color: #5a5a98;
+  opacity: 0.2;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #5a5a98 10px ), repeating-linear-gradient( #0044ff55, #0044ff );
+  margin:auto auto;
+  display:flex;
+  align-items: center;
+  justify-content: center
+}
+
+.start-button{
+  border:1px solid black;
+  border-radius:20px;
+  padding:5px;
+  width:200px;
+  background:darkblue;
+  color:white;
+}
+
+.chat-button{
+  margin-left:20px;
+}
+
+
+.result-container{
+  max-width: 700px;
+  width:650px;
+  min-width: 550px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
+  max-height:600px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.result-container h1{
+  font-size:75px;
+}
+
+
+.result-container button, .result-container a{
+  background: linear-gradient(90.04deg, #70a4cf 0.03%, #75c1ff 99.96%);
+  border-radius: 9px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 42px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: red;
+}
+
+h1 span{
+  color: #75c1ff;
+  text-decoration: underline;
+  font-weight: bold ;
+}
+
+.bbtn{
+  margin: 0px 3px 0px 3px;
+}
