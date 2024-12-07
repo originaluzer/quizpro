@@ -1,6 +1,6 @@
 
 
-export const data = [
+export let data = [
     {
      "type": "multiple",
      "difficulty": "medium",

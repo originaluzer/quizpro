@@ -10,7 +10,7 @@ import LogoIcon from './LogoIcon';
   const [profile, setProfile] = useState([]);
 
    return ( 
-<div className="relative">
+<div className="relative" id="MainContent"> 
   <header className="absolute inset-x-0 top-0 z-10 w-full">
     <div className="px-4 mx-auto sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16 lg:h-20">
@@ -56,7 +56,7 @@ import LogoIcon from './LogoIcon';
         </button>
         <div className="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
           <a
-            href="#"
+            href="#hiw"
             title=""
             className="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
           >
@@ -64,7 +64,7 @@ import LogoIcon from './LogoIcon';
             How it works{" "}
           </a>
           <a
-            href="#"
+            href="#features"
             title=""
             className="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
           >
@@ -72,18 +72,10 @@ import LogoIcon from './LogoIcon';
             Features{" "}
           </a>
           <a
-            href="#"
-            title=""
-            className="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
-          >
-            {" "}
-            About us{" "}
-          </a>
-          <a
             title=""  
             className="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold transition-all duration-200 rounded-full bg-lime-500 text-white hover:bg-lime-600 "
             role="button"
-            href="/signup"
+            href="/sign-up"
           >
             {" "}
             Login{" "}
@@ -114,7 +106,7 @@ import LogoIcon from './LogoIcon';
 
      
              <a
-              href="/quiz"
+              href="/sign-up"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black bg-lime-300 transition duration-200 rounded shadow-md  hover:bg-lime-300 focus:shadow-outline focus:outline-none"
             >
               Get started

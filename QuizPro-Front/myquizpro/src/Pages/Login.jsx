@@ -5,7 +5,7 @@ import axios from "axios";
 import Swal from 'sweetalert2'
 
 
-function Signup() {
+function Login() {
 
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -25,11 +25,11 @@ function Signup() {
 
         e.preventDefault();
         try {
-            const response = await  axios.post('http://localhost:5200/users', {
+            const response = await  axios.post('http://localhost:5200/login', {
               email: email,
               password: password,
             });
-            if(response.status == 201){
+            if(response.status == 200){
                 window.location.href="quiz"
             }
 
@@ -141,18 +141,13 @@ function Signup() {
 
                                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                                     <button
-                                        className="inline-block bg-lime-500 shrink-0 rounded-md border  px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-lime-600 focus:outline-none focus:ring active:text-blue-500 disabled:cursor-not-allowed"
+                                        className="inline-block shrink-0 rounded-md border border-lime-600 bg-lime-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-lime-600 focus:outline-none focus:ring active:text-blue-500 disabled:cursor-not-allowed"
                                         onClick={handleSignUp}
                                         disabled={email == "" && password == ""}
 
                                     >
-                                        Create an account
-                                    </button>
-
-                                    <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                                        Already have an account?<br />
-                                        <a href="/login" className="text-gray-700 underline">Log in</a>.
-                                    </p>
+                                        Login 
+                                    </button>                                
                                 </div>
                             </form>
                         </div>
@@ -163,4 +158,4 @@ function Signup() {
     )
 }
 
-export default Signup
+export default Login

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 function QuizPage() {
 
 	const handleQuizSelect = (quiz) => {
-		// Store quiz data in localStorage when a user selects a quiz
 		localStorage.setItem('quizData', JSON.stringify(quiz));
 	  };
 	
@@ -22,13 +21,12 @@ function QuizPage() {
 		{ subject: 'Politics', type: 'Multiple Choice', difficulty: 'Easy',image:"https://images.pexels.com/photos/4669146/pexels-photo-4669146.jpeg?auto=compress&cs=tinysrgb&w=1200" },
 		{ subject: 'Art', type: 'Multiple Choice', difficulty: 'Easy',image:"https://images.pexels.com/photos/1161542/pexels-photo-1161542.jpeg?auto=compress&cs=tinysrgb&w=1200" },
 		{ subject: 'Animals', type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/1431465/pexels-photo-1431465.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+		{ subject: 'Entertainment: Japanese Anime & Manga', type: 'True/False', difficulty: 'Medium',image:"https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1600" },
 		{ subject: 'Vehicles', type: 'Multiple Choice', difficulty: 'Easy',image:"https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1200" },
 		{ subject: 'Mythology', type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg?auto=compress&cs=tinysrgb&w=1600" },
 		{ subject: 'Science: Mathematics', type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/3729557/pexels-photo-3729557.jpeg?auto=compress&cs=tinysrgb&w=1600" },
 		{ subject: 'Computers', type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1600" },
-
 	];
-
 	return (
 		<>
 			<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

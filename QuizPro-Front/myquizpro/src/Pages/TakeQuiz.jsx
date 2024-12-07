@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Questions from './Questions';
 import Score from './Score';
+import { data } from './CS-Questions'
 
 
 
@@ -17,6 +18,8 @@ function TakeQuiz() {
 
 	const [quizStarted, setQuizStarted] = useState(false);
 	const [isLastq, setIsLastq] = useState(false)
+
+  
 
 	useEffect(() => {
 		if (quizStarted) {
@@ -72,7 +75,8 @@ function TakeQuiz() {
         "Vehicles":28,
         "Mythology":20,
         "Science: Mathematics":19,
-
+        "Entertainment: Japanese Anime & Manga":31,
+        
     }
 
     useEffect(() => {
@@ -95,18 +99,25 @@ function TakeQuiz() {
             if (type == "Multiple Choice") {
                 type = "multiple"
             }
-
-
-
-
+            if (type == "True/False") {
+                type = "Boolean"
+            }
+            if(subject == "Computers"){
+                setQuestions(data);
+            }
             type = type.toLowerCase();
             difficulty = difficulty.toLowerCase();
             subject = quizObj[subject]
+            let apiUrl;
+            console.log(type);
+            if(type == "boolean"){
 
-            const apiurl = `https://opentdb.com/api.php?amount=10&category=${subject}&difficulty=${difficulty}&type=${type}`
-            console.log(apiurl);
+                apiUrl = `https://opentdb.com/api.php?amount=10&category=${subject}&type=${type}`
+            }else{
 
-            fetch(`https://opentdb.com/api.php?amount=10&category=${subject}&difficulty=${difficulty}&type=${type}`)
+                apiUrl = `https://opentdb.com/api.php?amount=10&category=${subject}&difficulty=${difficulty}&type=${type}`
+            }
+            fetch(apiUrl)
                 .then((response) => {
                     return response.json().then((data) => {
                         console.log(data.results);
@@ -118,7 +129,6 @@ function TakeQuiz() {
                 });
             //const data = await response.json();
             //setQuestions(data);
-            //console.log(response);
             setLoading(false);
         } catch (error) {
             console.error("Error fetching questions:", error);
