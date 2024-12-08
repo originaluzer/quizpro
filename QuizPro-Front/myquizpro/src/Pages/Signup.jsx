@@ -25,7 +25,7 @@ function Signup() {
 
         e.preventDefault();
         try {
-            const response = await  axios.post('http://localhost:5200/users', {
+            const response = await  axios.post('http://localhost:5200/api/users', {
               email: email,
               password: password,
             });
