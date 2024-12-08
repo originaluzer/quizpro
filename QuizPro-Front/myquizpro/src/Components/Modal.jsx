@@ -8,7 +8,7 @@ function Modal({ isOpen, text, onClose }) {
   <div style={modalStyles.overlay}>
       <div style={modalStyles.modal}>
         <h2>QuizPro AI</h2>
-        <p>{text}</p> {/* Render the passed text */}
+        <p>{text}</p>
         <button onClick={onClose}>Close QuizPro Ai</button>
       </div>
     </div>

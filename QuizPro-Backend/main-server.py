@@ -93,7 +93,5 @@ def login_user():
 def not_found(e):   
   return app.send_static_file('index.html')
 
-
-
 if __name__ == '__main__':
     app.run(host='localhost', port=5200)
