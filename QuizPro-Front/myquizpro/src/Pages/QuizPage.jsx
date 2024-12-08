@@ -10,8 +10,6 @@ function QuizPage() {
 	const handleQuizSelect = (quiz) => {
 		localStorage.setItem('quizData', JSON.stringify(quiz));
 	  };
-	
-
 	const quizData = [
 		{ subject: "Geography", type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1200"},
 		{ subject: "General Knowledge", type: 'Multiple Choice', difficulty: 'Medium',image:"https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&cs=tinysrgb&w=1200"},
