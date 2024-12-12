@@ -25,7 +25,7 @@ function Signup() {
 
         e.preventDefault();
         try {
-            const response = await  axios.post('http://localhost:5200/api/users', {
+            const response = await  axios.post('http://quizpro-58lg.onrender.com/api/users', {
               email: email,
               password: password,
             });
@@ -35,7 +35,7 @@ function Signup() {
 
           } catch (error) {
             console.error('Error during login:', error.response ? error.response.data : error.message);
-            console.log(error.response.data.message)
+          /*   console.log(error.response.data.message) */
             Swal.fire({
                 title:"Error" ,
                 text: error.response.data.message,

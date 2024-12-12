@@ -25,7 +25,7 @@ function Login() {
 
         e.preventDefault();
         try {
-            const response = await  axios.post('http://localhost:5200/api/login', {
+            const response = await  axios.post('http://quizpro-58lg.onrender.com/api/login', {
               email: email,
               password: password,
             });
