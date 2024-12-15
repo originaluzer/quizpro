@@ -95,6 +95,10 @@ function TakeQuiz() {
     }, [dataObj]);
 
     const fetchQuestions = async (subject, type, difficulty) => {
+
+        if(subject == "Computers"){
+            setQuestions(data);
+        }else{
         try {
             if (type == "Multiple Choice") {
                 type = "multiple"
@@ -102,9 +106,7 @@ function TakeQuiz() {
             if (type == "True/False") {
                 type = "Boolean"
             }
-            if(subject == "Computers"){
-                setQuestions(data);
-            }
+           
             type = type.toLowerCase();
             difficulty = difficulty.toLowerCase();
             subject = quizObj[subject]
@@ -135,6 +137,7 @@ function TakeQuiz() {
             setLoading(false);
         }
     };
+}
 
     return (
         <>
